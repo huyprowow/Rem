@@ -115,7 +115,7 @@ const onError = (err) => {
 
 //load material
 const mtlLoader = new MTLLoader();
-mtlLoader.setPath("/Rem/");
+mtlLoader.setPath("public/Rem/");
 mtlLoader.load("rem.mtl", (materials) => {
   materials.preload();
 
@@ -125,7 +125,7 @@ mtlLoader.load("rem.mtl", (materials) => {
   //load object
   const objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
-  objLoader.setPath("/Rem/");
+  objLoader.setPath("public/Rem/");
   objLoader.load(
     "rem.obj",
     (object) => {
